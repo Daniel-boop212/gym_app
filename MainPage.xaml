@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GymApp.MainPage">
+
+    <Grid Padding="20" RowDefinitions="Auto,*">
+
+        <Label
+            Text="Ejercicios"
+            FontSize="30"
+            FontAttributes="Bold" />
+
+        <CollectionView
+            x:Name="ExercisesList"
+            Grid.Row="1"
+            Margin="0,20,0,0">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <VerticalStackLayout Padding="10">
+
+                        <Label
+                            Text="{Binding Name}"
+                            FontSize="20"
+                            FontAttributes="Bold" />
+
+                        <Label
+                            Text="{Binding MuscleGroup}"
+                            FontSize="15" />
+
+                    </VerticalStackLayout>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>

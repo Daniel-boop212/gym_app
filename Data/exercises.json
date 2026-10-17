@@ -1,0 +1,1004 @@
+[
+  {
+    "id": 1,
+    "name": "Press de banca con barra",
+    "muscleGroup": "Pecho",
+    "secondaryMuscles": ["Tríceps", "Hombros"],
+    "equipment": "Barra",
+    "difficulty": "Intermedio",
+    "type": "Fuerza",
+    "description": "Ejercicio compuesto para desarrollar principalmente el pecho.",
+    "instructions": [
+      "Acuéstate en el banco con los pies firmes en el suelo.",
+      "Agarra la barra ligeramente más abierta que el ancho de los hombros.",
+      "Baja la barra de forma controlada hacia el pecho.",
+      "Empuja la barra hacia arriba hasta extender los brazos."
+    ],
+    "tips": [
+      "Mantén los omóplatos retraídos.",
+      "No rebotes la barra contra el pecho."
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Press inclinado con barra",
+    "muscleGroup": "Pecho",
+    "secondaryMuscles": ["Tríceps", "Hombros"],
+    "equipment": "Barra",
+    "difficulty": "Intermedio",
+    "type": "Fuerza",
+    "description": "Variante del press de banca que enfatiza la parte superior del pecho.",
+    "instructions": [
+      "Coloca el banco con una inclinación moderada.",
+      "Agarra la barra ligeramente más abierta que los hombros.",
+      "Baja la barra hacia la parte superior del pecho.",
+      "Empuja hasta extender los brazos."
+    ],
+    "tips": [
+      "No utilices una inclinación excesivamente alta.",
+      "Controla el movimiento durante la bajada."
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Press de banca con mancuernas",
+    "muscleGroup": "Pecho",
+    "secondaryMuscles": ["Tríceps", "Hombros"],
+    "equipment": "Mancuernas",
+    "difficulty": "Intermedio",
+    "type": "Fuerza",
+    "description": "Ejercicio para el pecho que permite trabajar cada brazo de manera independiente.",
+    "instructions": [
+      "Acuéstate en un banco sosteniendo una mancuerna en cada mano.",
+      "Coloca las mancuernas a los lados del pecho.",
+      "Empuja las mancuernas hacia arriba.",
+      "Bájalas lentamente hasta una posición cómoda."
+    ],
+    "tips": [
+      "Evita juntar las mancuernas bruscamente arriba.",
+      "Mantén las muñecas estables."
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Aperturas con mancuernas",
+    "muscleGroup": "Pecho",
+    "secondaryMuscles": ["Hombros"],
+    "equipment": "Mancuernas",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio de aislamiento para trabajar los músculos pectorales.",
+    "instructions": [
+      "Acuéstate en un banco con una mancuerna en cada mano.",
+      "Extiende los brazos sobre el pecho.",
+      "Abre los brazos lentamente hacia los lados.",
+      "Regresa las mancuernas a la posición inicial."
+    ],
+    "tips": [
+      "Mantén una ligera flexión en los codos.",
+      "No utilices demasiado peso."
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Flexiones",
+    "muscleGroup": "Pecho",
+    "secondaryMuscles": ["Tríceps", "Hombros", "Core"],
+    "equipment": "Peso corporal",
+    "difficulty": "Principiante",
+    "type": "Fuerza",
+    "description": "Ejercicio con peso corporal para trabajar el tren superior.",
+    "instructions": [
+      "Coloca las manos ligeramente más abiertas que los hombros.",
+      "Mantén el cuerpo recto.",
+      "Baja el pecho hacia el suelo.",
+      "Empuja el cuerpo hacia arriba."
+    ],
+    "tips": [
+      "Evita elevar demasiado la cadera.",
+      "Mantén el abdomen activo."
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Sentadilla con barra",
+    "muscleGroup": "Piernas",
+    "secondaryMuscles": ["Glúteos", "Core"],
+    "equipment": "Barra",
+    "difficulty": "Intermedio",
+    "type": "Compuesto",
+    "description": "Ejercicio compuesto fundamental para desarrollar las piernas.",
+    "instructions": [
+      "Coloca la barra sobre la parte superior de la espalda.",
+      "Separa los pies aproximadamente al ancho de los hombros.",
+      "Flexiona las rodillas y las caderas para descender.",
+      "Empuja el suelo para regresar a la posición inicial."
+    ],
+    "tips": [
+      "Mantén la espalda estable.",
+      "Las rodillas deben seguir la dirección de los pies."
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Sentadilla goblet",
+    "muscleGroup": "Piernas",
+    "secondaryMuscles": ["Glúteos", "Core"],
+    "equipment": "Mancuerna",
+    "difficulty": "Principiante",
+    "type": "Compuesto",
+    "description": "Sentadilla realizada sosteniendo una mancuerna frente al pecho.",
+    "instructions": [
+      "Sostén una mancuerna frente al pecho.",
+      "Coloca los pies a una distancia cómoda.",
+      "Desciende flexionando caderas y rodillas.",
+      "Regresa a la posición inicial."
+    ],
+    "tips": [
+      "Mantén la mancuerna cerca del pecho.",
+      "Mantén el torso relativamente erguido."
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Prensa de piernas",
+    "muscleGroup": "Piernas",
+    "secondaryMuscles": ["Glúteos"],
+    "equipment": "Máquina",
+    "difficulty": "Principiante",
+    "type": "Fuerza",
+    "description": "Ejercicio de máquina para desarrollar principalmente los cuádriceps.",
+    "instructions": [
+      "Siéntate correctamente en la máquina.",
+      "Coloca los pies sobre la plataforma.",
+      "Desbloquea el peso y flexiona las piernas.",
+      "Empuja la plataforma hasta extender las piernas sin bloquear las rodillas."
+    ],
+    "tips": [
+      "No despegues la espalda del respaldo.",
+      "No bloquees completamente las rodillas."
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Extensión de piernas",
+    "muscleGroup": "Cuádriceps",
+    "secondaryMuscles": [],
+    "equipment": "Máquina",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio de aislamiento para los cuádriceps.",
+    "instructions": [
+      "Siéntate y ajusta el respaldo de la máquina.",
+      "Coloca los tobillos detrás del soporte.",
+      "Extiende las piernas.",
+      "Baja el peso lentamente."
+    ],
+    "tips": [
+      "Utiliza un movimiento controlado.",
+      "Evita utilizar impulso."
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Curl femoral",
+    "muscleGroup": "Isquiotibiales",
+    "secondaryMuscles": ["Pantorrillas"],
+    "equipment": "Máquina",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio de aislamiento para los músculos posteriores del muslo.",
+    "instructions": [
+      "Ajusta la máquina según tu altura.",
+      "Coloca las piernas correctamente bajo el soporte.",
+      "Flexiona las rodillas llevando los talones hacia los glúteos.",
+      "Regresa lentamente."
+    ],
+    "tips": [
+      "No levantes las caderas del asiento.",
+      "Controla especialmente la fase de regreso."
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Peso muerto convencional",
+    "muscleGroup": "Espalda",
+    "secondaryMuscles": ["Glúteos", "Isquiotibiales", "Core"],
+    "equipment": "Barra",
+    "difficulty": "Avanzado",
+    "type": "Compuesto",
+    "description": "Ejercicio compuesto que trabaja gran parte de la cadena posterior.",
+    "instructions": [
+      "Coloca la barra frente a los pies.",
+      "Flexiona las caderas y las rodillas para agarrar la barra.",
+      "Mantén la espalda estable y levanta la barra.",
+      "Extiende las caderas hasta quedar de pie."
+    ],
+    "tips": [
+      "Mantén la barra cerca del cuerpo.",
+      "No redondees excesivamente la espalda.",
+      "Aprende la técnica antes de utilizar cargas elevadas."
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Peso muerto rumano",
+    "muscleGroup": "Isquiotibiales",
+    "secondaryMuscles": ["Glúteos", "Espalda baja"],
+    "equipment": "Barra",
+    "difficulty": "Intermedio",
+    "type": "Compuesto",
+    "description": "Ejercicio enfocado en los isquiotibiales mediante un movimiento de bisagra de cadera.",
+    "instructions": [
+      "Sostén la barra frente a los muslos.",
+      "Lleva las caderas hacia atrás manteniendo la espalda estable.",
+      "Desciende la barra cerca de las piernas.",
+      "Extiende las caderas para volver a la posición inicial."
+    ],
+    "tips": [
+      "No es necesario llegar al suelo.",
+      "Mantén una ligera flexión de las rodillas."
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Zancadas",
+    "muscleGroup": "Piernas",
+    "secondaryMuscles": ["Glúteos", "Cuádriceps"],
+    "equipment": "Peso corporal",
+    "difficulty": "Principiante",
+    "type": "Compuesto",
+    "description": "Ejercicio unilateral para trabajar las piernas.",
+    "instructions": [
+      "Da un paso hacia adelante.",
+      "Flexiona ambas rodillas.",
+      "Desciende manteniendo el torso estable.",
+      "Empuja con la pierna delantera para regresar."
+    ],
+    "tips": [
+      "Mantén el equilibrio.",
+      "Evita que la rodilla delantera colapse hacia dentro."
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Hip thrust",
+    "muscleGroup": "Glúteos",
+    "secondaryMuscles": ["Isquiotibiales", "Core"],
+    "equipment": "Barra",
+    "difficulty": "Intermedio",
+    "type": "Compuesto",
+    "description": "Ejercicio enfocado en la extensión de cadera y el desarrollo de los glúteos.",
+    "instructions": [
+      "Apoya la parte superior de la espalda en un banco.",
+      "Coloca la barra sobre la cadera.",
+      "Empuja con los pies y eleva la cadera.",
+      "Aprieta los glúteos en la parte superior."
+    ],
+    "tips": [
+      "Evita hiperextender la espalda.",
+      "Mantén el movimiento controlado."
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Elevación de talones de pie",
+    "muscleGroup": "Pantorrillas",
+    "secondaryMuscles": [],
+    "equipment": "Máquina",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio para desarrollar las pantorrillas.",
+    "instructions": [
+      "Coloca los pies sobre la plataforma.",
+      "Desciende los talones de forma controlada.",
+      "Eleva los talones lo máximo posible.",
+      "Regresa lentamente."
+    ],
+    "tips": [
+      "Utiliza un rango de movimiento cómodo.",
+      "Evita rebotar."
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Dominadas",
+    "muscleGroup": "Espalda",
+    "secondaryMuscles": ["Bíceps", "Core"],
+    "equipment": "Barra de dominadas",
+    "difficulty": "Avanzado",
+    "type": "Compuesto",
+    "description": "Ejercicio con peso corporal para desarrollar la espalda.",
+    "instructions": [
+      "Agarra la barra con las manos separadas aproximadamente al ancho de los hombros.",
+      "Activa la espalda y el abdomen.",
+      "Eleva el cuerpo hasta acercar el pecho a la barra.",
+      "Desciende de manera controlada."
+    ],
+    "tips": [
+      "Evita balancearte excesivamente.",
+      "Utiliza asistencia si todavía no puedes realizar repeticiones completas."
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Jalón al pecho",
+    "muscleGroup": "Espalda",
+    "secondaryMuscles": ["Bíceps"],
+    "equipment": "Polea",
+    "difficulty": "Principiante",
+    "type": "Compuesto",
+    "description": "Ejercicio de polea para trabajar principalmente los dorsales.",
+    "instructions": [
+      "Siéntate correctamente en la máquina.",
+      "Agarra la barra con ambas manos.",
+      "Lleva la barra hacia la parte superior del pecho.",
+      "Regresa lentamente."
+    ],
+    "tips": [
+      "No tires de la barra utilizando únicamente los brazos.",
+      "Mantén el torso estable."
+    ]
+  },
+  {
+    "id": 18,
+    "name": "Remo con barra",
+    "muscleGroup": "Espalda",
+    "secondaryMuscles": ["Bíceps", "Core"],
+    "equipment": "Barra",
+    "difficulty": "Intermedio",
+    "type": "Compuesto",
+    "description": "Ejercicio compuesto para desarrollar la espalda.",
+    "instructions": [
+      "Inclina el torso manteniendo la espalda estable.",
+      "Sostén la barra con ambas manos.",
+      "Lleva la barra hacia el abdomen.",
+      "Baja la barra lentamente."
+    ],
+    "tips": [
+      "Evita utilizar impulso.",
+      "Mantén las rodillas ligeramente flexionadas."
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Remo con mancuerna",
+    "muscleGroup": "Espalda",
+    "secondaryMuscles": ["Bíceps"],
+    "equipment": "Mancuerna",
+    "difficulty": "Principiante",
+    "type": "Compuesto",
+    "description": "Ejercicio unilateral para trabajar la espalda.",
+    "instructions": [
+      "Apoya una mano y una rodilla sobre un banco.",
+      "Sostén la mancuerna con la mano libre.",
+      "Lleva la mancuerna hacia la cadera.",
+      "Baja lentamente."
+    ],
+    "tips": [
+      "Evita girar excesivamente el torso.",
+      "Concéntrate en mover el codo hacia atrás."
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Pullover con mancuerna",
+    "muscleGroup": "Espalda",
+    "secondaryMuscles": ["Pecho"],
+    "equipment": "Mancuerna",
+    "difficulty": "Intermedio",
+    "type": "Aislamiento",
+    "description": "Ejercicio que involucra principalmente dorsales y musculatura del torso.",
+    "instructions": [
+      "Acuéstate en un banco sosteniendo una mancuerna.",
+      "Extiende la mancuerna sobre el pecho.",
+      "Llévala lentamente por detrás de la cabeza.",
+      "Regresa a la posición inicial."
+    ],
+    "tips": [
+      "Utiliza un peso que puedas controlar.",
+      "Evita realizar un rango doloroso."
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Curl de bíceps con barra",
+    "muscleGroup": "Bíceps",
+    "secondaryMuscles": ["Antebrazos"],
+    "equipment": "Barra",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio clásico para desarrollar los bíceps.",
+    "instructions": [
+      "Sostén la barra con las palmas hacia arriba.",
+      "Mantén los codos cerca del cuerpo.",
+      "Flexiona los brazos elevando la barra.",
+      "Baja lentamente."
+    ],
+    "tips": [
+      "Evita balancear el torso.",
+      "No utilices más peso del que puedas controlar."
+    ]
+  },
+  {
+    "id": 22,
+    "name": "Curl de bíceps con mancuernas",
+    "muscleGroup": "Bíceps",
+    "secondaryMuscles": ["Antebrazos"],
+    "equipment": "Mancuernas",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio de aislamiento para los bíceps.",
+    "instructions": [
+      "Sostén una mancuerna en cada mano.",
+      "Mantén los codos cerca del torso.",
+      "Flexiona los brazos.",
+      "Desciende lentamente."
+    ],
+    "tips": [
+      "Mantén las muñecas neutrales.",
+      "Evita utilizar impulso."
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Curl martillo",
+    "muscleGroup": "Bíceps",
+    "secondaryMuscles": ["Braquial", "Antebrazos"],
+    "equipment": "Mancuernas",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Variante del curl que utiliza un agarre neutro.",
+    "instructions": [
+      "Sostén las mancuernas con las palmas enfrentadas.",
+      "Mantén los codos cerca del cuerpo.",
+      "Flexiona los brazos.",
+      "Baja las mancuernas lentamente."
+    ],
+    "tips": [
+      "No muevas los codos hacia adelante.",
+      "Controla la bajada."
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Curl predicador",
+    "muscleGroup": "Bíceps",
+    "secondaryMuscles": ["Antebrazos"],
+    "equipment": "Banco predicador",
+    "difficulty": "Intermedio",
+    "type": "Aislamiento",
+    "description": "Ejercicio de aislamiento que limita el movimiento del brazo.",
+    "instructions": [
+      "Apoya los brazos sobre el banco predicador.",
+      "Sostén la barra o mancuerna.",
+      "Flexiona los codos para elevar el peso.",
+      "Extiende los brazos lentamente."
+    ],
+    "tips": [
+      "No bloquees violentamente los codos.",
+      "Utiliza un peso moderado."
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Press militar con barra",
+    "muscleGroup": "Hombros",
+    "secondaryMuscles": ["Tríceps", "Core"],
+    "equipment": "Barra",
+    "difficulty": "Intermedio",
+    "type": "Compuesto",
+    "description": "Ejercicio compuesto para desarrollar principalmente los hombros.",
+    "instructions": [
+      "Sostén la barra aproximadamente a la altura de los hombros.",
+      "Activa el abdomen.",
+      "Empuja la barra por encima de la cabeza.",
+      "Baja de forma controlada."
+    ],
+    "tips": [
+      "Evita arquear excesivamente la espalda.",
+      "Mantén el movimiento controlado."
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Press de hombros con mancuernas",
+    "muscleGroup": "Hombros",
+    "secondaryMuscles": ["Tríceps"],
+    "equipment": "Mancuernas",
+    "difficulty": "Principiante",
+    "type": "Compuesto",
+    "description": "Ejercicio para desarrollar la musculatura de los hombros.",
+    "instructions": [
+      "Sostén una mancuerna en cada mano a la altura de los hombros.",
+      "Empuja las mancuernas hacia arriba.",
+      "Extiende los brazos sin bloquearlos bruscamente.",
+      "Regresa lentamente."
+    ],
+    "tips": [
+      "Mantén el abdomen activo.",
+      "No utilices impulso de las piernas."
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Elevaciones laterales",
+    "muscleGroup": "Hombros",
+    "secondaryMuscles": [],
+    "equipment": "Mancuernas",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio de aislamiento para la parte lateral de los hombros.",
+    "instructions": [
+      "Sostén una mancuerna en cada mano.",
+      "Mantén los brazos ligeramente flexionados.",
+      "Eleva los brazos hacia los lados.",
+      "Baja lentamente."
+    ],
+    "tips": [
+      "No necesitas levantar las mancuernas excesivamente alto.",
+      "Evita balancear el cuerpo."
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Elevaciones frontales",
+    "muscleGroup": "Hombros",
+    "secondaryMuscles": ["Pecho"],
+    "equipment": "Mancuernas",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio de aislamiento para la parte frontal de los hombros.",
+    "instructions": [
+      "Sostén las mancuernas frente a los muslos.",
+      "Eleva los brazos hacia adelante.",
+      "Llega aproximadamente a la altura de los hombros.",
+      "Baja lentamente."
+    ],
+    "tips": [
+      "Utiliza pesos moderados.",
+      "Evita utilizar impulso."
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Face pull",
+    "muscleGroup": "Hombros",
+    "secondaryMuscles": ["Espalda", "Trapecios"],
+    "equipment": "Polea",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio para trabajar la parte posterior de los hombros y la musculatura superior de la espalda.",
+    "instructions": [
+      "Coloca una cuerda en una polea alta.",
+      "Agarra la cuerda con ambas manos.",
+      "Lleva la cuerda hacia el rostro.",
+      "Regresa lentamente."
+    ],
+    "tips": [
+      "Mantén los codos elevados.",
+      "No utilices demasiado peso."
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Press cerrado",
+    "muscleGroup": "Tríceps",
+    "secondaryMuscles": ["Pecho", "Hombros"],
+    "equipment": "Barra",
+    "difficulty": "Intermedio",
+    "type": "Compuesto",
+    "description": "Variante del press de banca que aumenta la participación de los tríceps.",
+    "instructions": [
+      "Acuéstate en el banco.",
+      "Agarra la barra con las manos más juntas que en el press convencional.",
+      "Baja la barra hacia el pecho.",
+      "Empuja hasta extender los brazos."
+    ],
+    "tips": [
+      "No juntes excesivamente las manos.",
+      "Mantén los codos relativamente cerca del cuerpo."
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Extensión de tríceps en polea",
+    "muscleGroup": "Tríceps",
+    "secondaryMuscles": [],
+    "equipment": "Polea",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio de aislamiento para los tríceps.",
+    "instructions": [
+      "Agarra la cuerda o barra de la polea.",
+      "Mantén los codos cerca del cuerpo.",
+      "Extiende los brazos hacia abajo.",
+      "Regresa lentamente."
+    ],
+    "tips": [
+      "No muevas excesivamente los codos.",
+      "Controla la fase de regreso."
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Extensión de tríceps sobre la cabeza",
+    "muscleGroup": "Tríceps",
+    "secondaryMuscles": [],
+    "equipment": "Mancuerna",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio para trabajar los tríceps con los brazos por encima de la cabeza.",
+    "instructions": [
+      "Sostén una mancuerna por encima de la cabeza.",
+      "Flexiona los codos llevando la mancuerna detrás de la cabeza.",
+      "Extiende los brazos.",
+      "Repite el movimiento."
+    ],
+    "tips": [
+      "Mantén los codos relativamente juntos.",
+      "Utiliza un peso controlable."
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Fondos en paralelas",
+    "muscleGroup": "Tríceps",
+    "secondaryMuscles": ["Pecho", "Hombros"],
+    "equipment": "Paralelas",
+    "difficulty": "Avanzado",
+    "type": "Compuesto",
+    "description": "Ejercicio con peso corporal para desarrollar tríceps y pecho.",
+    "instructions": [
+      "Sujétate de las paralelas.",
+      "Eleva el cuerpo manteniendo los brazos extendidos.",
+      "Flexiona los codos para descender.",
+      "Empuja para volver a la posición inicial."
+    ],
+    "tips": [
+      "Utiliza asistencia si es necesario.",
+      "Controla la profundidad."
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Crunch abdominal",
+    "muscleGroup": "Abdomen",
+    "secondaryMuscles": [],
+    "equipment": "Peso corporal",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio básico para trabajar la musculatura abdominal.",
+    "instructions": [
+      "Acuéstate boca arriba con las rodillas flexionadas.",
+      "Coloca las manos detrás de la cabeza o sobre el pecho.",
+      "Eleva ligeramente los hombros del suelo.",
+      "Regresa lentamente."
+    ],
+    "tips": [
+      "No tires del cuello.",
+      "Concéntrate en contraer el abdomen."
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Elevaciones de piernas",
+    "muscleGroup": "Abdomen",
+    "secondaryMuscles": ["Flexores de cadera"],
+    "equipment": "Peso corporal",
+    "difficulty": "Intermedio",
+    "type": "Aislamiento",
+    "description": "Ejercicio para trabajar principalmente la musculatura abdominal.",
+    "instructions": [
+      "Acuéstate boca arriba.",
+      "Mantén las piernas extendidas.",
+      "Eleva las piernas de forma controlada.",
+      "Bájalas lentamente sin perder el control."
+    ],
+    "tips": [
+      "Evita arquear excesivamente la espalda.",
+      "Puedes flexionar ligeramente las rodillas si es necesario."
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Plancha",
+    "muscleGroup": "Core",
+    "secondaryMuscles": ["Abdomen", "Hombros"],
+    "equipment": "Peso corporal",
+    "difficulty": "Principiante",
+    "type": "Isométrico",
+    "description": "Ejercicio isométrico para desarrollar estabilidad del core.",
+    "instructions": [
+      "Apoya los antebrazos y las puntas de los pies.",
+      "Mantén el cuerpo alineado.",
+      "Activa el abdomen y los glúteos.",
+      "Mantén la posición durante el tiempo indicado."
+    ],
+    "tips": [
+      "Evita hundir la cadera.",
+      "No eleves excesivamente los glúteos."
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Plancha lateral",
+    "muscleGroup": "Core",
+    "secondaryMuscles": ["Oblicuos", "Hombros"],
+    "equipment": "Peso corporal",
+    "difficulty": "Intermedio",
+    "type": "Isométrico",
+    "description": "Ejercicio para desarrollar principalmente los músculos laterales del abdomen.",
+    "instructions": [
+      "Apoya un antebrazo en el suelo.",
+      "Coloca los pies uno sobre otro o en una posición estable.",
+      "Eleva la cadera.",
+      "Mantén el cuerpo alineado."
+    ],
+    "tips": [
+      "No dejes caer la cadera.",
+      "Mantén el abdomen contraído."
+    ]
+  },
+  {
+    "id": 38,
+    "name": "Mountain climbers",
+    "muscleGroup": "Core",
+    "secondaryMuscles": ["Piernas", "Hombros"],
+    "equipment": "Peso corporal",
+    "difficulty": "Intermedio",
+    "type": "Cardio",
+    "description": "Ejercicio dinámico que combina trabajo cardiovascular y estabilización del core.",
+    "instructions": [
+      "Adopta una posición de plancha alta.",
+      "Lleva una rodilla hacia el pecho.",
+      "Alterna las piernas rápidamente.",
+      "Mantén el cuerpo estable."
+    ],
+    "tips": [
+      "Mantén las manos debajo de los hombros.",
+      "Aumenta la velocidad progresivamente."
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Burpees",
+    "muscleGroup": "Cuerpo completo",
+    "secondaryMuscles": ["Pecho", "Piernas", "Core", "Hombros"],
+    "equipment": "Peso corporal",
+    "difficulty": "Avanzado",
+    "type": "Cardio",
+    "description": "Ejercicio de cuerpo completo con una alta demanda cardiovascular.",
+    "instructions": [
+      "Comienza de pie.",
+      "Baja hasta colocar las manos en el suelo.",
+      "Lleva los pies hacia atrás.",
+      "Regresa los pies hacia adelante.",
+      "Realiza un salto vertical."
+    ],
+    "tips": [
+      "Adapta la velocidad a tu condición física.",
+      "Puedes eliminar el salto para reducir la intensidad."
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Jumping jacks",
+    "muscleGroup": "Cuerpo completo",
+    "secondaryMuscles": ["Piernas", "Hombros"],
+    "equipment": "Peso corporal",
+    "difficulty": "Principiante",
+    "type": "Cardio",
+    "description": "Ejercicio cardiovascular sencillo para aumentar la frecuencia cardíaca.",
+    "instructions": [
+      "Comienza de pie con los pies juntos.",
+      "Salta separando las piernas mientras elevas los brazos.",
+      "Salta nuevamente para regresar a la posición inicial.",
+      "Repite."
+    ],
+    "tips": [
+      "Aterriza suavemente.",
+      "Mantén un ritmo constante."
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Remo en máquina",
+    "muscleGroup": "Espalda",
+    "secondaryMuscles": ["Bíceps", "Hombros"],
+    "equipment": "Máquina",
+    "difficulty": "Principiante",
+    "type": "Cardio",
+    "description": "Ejercicio cardiovascular realizado en una máquina de remo.",
+    "instructions": [
+      "Siéntate y coloca los pies en los soportes.",
+      "Agarra el manillar.",
+      "Empuja con las piernas y lleva el manillar hacia el torso.",
+      "Regresa extendiendo primero los brazos y luego las piernas."
+    ],
+    "tips": [
+      "Mantén una técnica controlada.",
+      "Coordina el movimiento de piernas y brazos."
+    ]
+  },
+  {
+    "id": 42,
+    "name": "Caminata en cinta",
+    "muscleGroup": "Piernas",
+    "secondaryMuscles": ["Core"],
+    "equipment": "Cinta de correr",
+    "difficulty": "Principiante",
+    "type": "Cardio",
+    "description": "Actividad cardiovascular de baja intensidad realizada en cinta.",
+    "instructions": [
+      "Sube a la cinta cuando esté detenida.",
+      "Selecciona una velocidad cómoda.",
+      "Comienza a caminar.",
+      "Aumenta o disminuye la velocidad según sea necesario."
+    ],
+    "tips": [
+      "Utiliza las barandas únicamente cuando sea necesario.",
+      "Mantén una postura natural."
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Bicicleta estática",
+    "muscleGroup": "Piernas",
+    "secondaryMuscles": ["Core"],
+    "equipment": "Bicicleta estática",
+    "difficulty": "Principiante",
+    "type": "Cardio",
+    "description": "Ejercicio cardiovascular de bajo impacto.",
+    "instructions": [
+      "Ajusta la altura del asiento.",
+      "Coloca los pies correctamente en los pedales.",
+      "Comienza a pedalear.",
+      "Ajusta la resistencia según tu objetivo."
+    ],
+    "tips": [
+      "Evita una resistencia excesiva al principio.",
+      "Mantén una cadencia cómoda."
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Abducción de cadera",
+    "muscleGroup": "Glúteos",
+    "secondaryMuscles": ["Cadera"],
+    "equipment": "Máquina",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio de aislamiento para la musculatura lateral de la cadera y los glúteos.",
+    "instructions": [
+      "Siéntate en la máquina.",
+      "Coloca las piernas contra los soportes.",
+      "Separa las piernas contra la resistencia.",
+      "Regresa lentamente."
+    ],
+    "tips": [
+      "No utilices impulso.",
+      "Controla el movimiento durante todo el recorrido."
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Aducción de cadera",
+    "muscleGroup": "Aductores",
+    "secondaryMuscles": ["Cadera"],
+    "equipment": "Máquina",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio de aislamiento para los músculos aductores.",
+    "instructions": [
+      "Siéntate correctamente en la máquina.",
+      "Coloca las piernas contra los soportes.",
+      "Junta las piernas contra la resistencia.",
+      "Regresa lentamente."
+    ],
+    "tips": [
+      "Utiliza un rango cómodo.",
+      "Evita realizar movimientos bruscos."
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Encogimientos de hombros",
+    "muscleGroup": "Trapecios",
+    "secondaryMuscles": [],
+    "equipment": "Mancuernas",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio para desarrollar principalmente los trapecios.",
+    "instructions": [
+      "Sostén una mancuerna en cada mano.",
+      "Mantén los brazos extendidos a los lados.",
+      "Eleva los hombros hacia arriba.",
+      "Baja lentamente."
+    ],
+    "tips": [
+      "No realices círculos con los hombros.",
+      "Mantén el cuello relajado."
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Buenos días con barra",
+    "muscleGroup": "Isquiotibiales",
+    "secondaryMuscles": ["Glúteos", "Espalda baja"],
+    "equipment": "Barra",
+    "difficulty": "Avanzado",
+    "type": "Compuesto",
+    "description": "Ejercicio basado en la bisagra de cadera para trabajar la cadena posterior.",
+    "instructions": [
+      "Coloca la barra sobre la parte superior de la espalda.",
+      "Flexiona ligeramente las rodillas.",
+      "Lleva las caderas hacia atrás inclinando el torso.",
+      "Extiende las caderas para regresar."
+    ],
+    "tips": [
+      "Utiliza poco peso hasta dominar la técnica.",
+      "Mantén la espalda estable."
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Step-up",
+    "muscleGroup": "Piernas",
+    "secondaryMuscles": ["Glúteos", "Core"],
+    "equipment": "Banco",
+    "difficulty": "Principiante",
+    "type": "Unilateral",
+    "description": "Ejercicio unilateral realizado subiendo sobre una plataforma.",
+    "instructions": [
+      "Coloca un pie sobre el banco o plataforma.",
+      "Empuja con esa pierna para elevar el cuerpo.",
+      "Sube la otra pierna.",
+      "Baja de manera controlada."
+    ],
+    "tips": [
+      "Utiliza una plataforma estable.",
+      "Evita impulsarte excesivamente con la pierna trasera."
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Patada de glúteo en polea",
+    "muscleGroup": "Glúteos",
+    "secondaryMuscles": ["Isquiotibiales"],
+    "equipment": "Polea",
+    "difficulty": "Principiante",
+    "type": "Aislamiento",
+    "description": "Ejercicio de aislamiento para los glúteos realizado con una polea.",
+    "instructions": [
+      "Coloca una tobillera conectada a la polea.",
+      "Sujétate de la máquina para mantener el equilibrio.",
+      "Lleva la pierna hacia atrás.",
+      "Regresa lentamente."
+    ],
+    "tips": [
+      "Evita arquear la espalda.",
+      "Mantén el movimiento controlado."
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Farmer's walk",
+    "muscleGroup": "Cuerpo completo",
+    "secondaryMuscles": ["Antebrazos", "Core", "Trapecios", "Piernas"],
+    "equipment": "Mancuernas",
+    "difficulty": "Intermedio",
+    "type": "Funcional",
+    "description": "Ejercicio funcional basado en caminar mientras se transportan cargas.",
+    "instructions": [
+      "Sostén una mancuerna pesada en cada mano.",
+      "Mantén una postura erguida.",
+      "Camina una distancia determinada.",
+      "Deja las pesas de forma controlada."
+    ],
+    "tips": [
+      "Mantén los hombros estables.",
+      "Evita inclinarte hacia los lados."
+    ]
+  }
+]
