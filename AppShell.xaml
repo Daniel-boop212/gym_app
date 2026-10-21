@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="UTF-8" ?>
+
 <Shell
     x:Class="GymApp.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:GymApp"
-    Title="GymApp">
+    xmlns:views="clr-namespace:GymApp.Views">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <TabBar>
+
+        <ShellContent
+            Title="Inicio"
+            ContentTemplate="{DataTemplate views:HomePage}"
+            Route="HomePage" />
+
+        <ShellContent
+            Title="Ejercicios"
+            ContentTemplate="{DataTemplate views:ExercisesPage}"
+            Route="ExercisesPage" />
+
+        <ShellContent
+            Title="Rutinas"
+            ContentTemplate="{DataTemplate views:RoutinesPage}"
+            Route="RoutinesPage" />
+
+        <ShellContent
+            Title="Progreso"
+            ContentTemplate="{DataTemplate views:ProgressPage}"
+            Route="ProgressPage" />
+
+        <ShellContent
+            Title="Perfil"
+            ContentTemplate="{DataTemplate views:ProfilePage}"
+            Route="ProfilePage" />
+
+    </TabBar>
 
 </Shell>

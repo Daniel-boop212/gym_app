@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GymApp.Views.RoutineDetailPage"
+    Title="Rutina">
+
+    <Grid
+        Padding="24"
+        RowDefinitions="Auto,Auto,*"
+        RowSpacing="20">
+
+        <Label
+            x:Name="RoutineNameLabel"
+            FontSize="32"
+            FontAttributes="Bold" />
+
+        <Label
+            Grid.Row="1"
+            Text="Ejercicios"
+            FontSize="24"
+            FontAttributes="Bold" />
+
+        <CollectionView
+            x:Name="ExercisesList"
+            Grid.Row="2"
+            ItemsSource="{Binding Exercises}"
+            SelectionMode="Single"
+            SelectionChanged="OnRoutineExerciseSelected">
+
+            <CollectionView.Header>
+
+                <Button
+                    Text="+ Agregar ejercicio"
+                    Clicked="OnAddExerciseClicked"
+                    Margin="0,0,0,15" />
+
+            </CollectionView.Header>
+
+            <CollectionView.EmptyView>
+
+                <Label
+                    Text="Esta rutina todavía no tiene ejercicios."
+                    FontSize="18"
+                    HorizontalTextAlignment="Center"
+                    VerticalOptions="Center" />
+
+            </CollectionView.EmptyView>
+
+            <CollectionView.ItemTemplate>
+
+                <DataTemplate>
+
+                    <Border
+                        Padding="15"
+                        Margin="0,5"
+                        StrokeShape="RoundRectangle 10">
+
+                        <VerticalStackLayout Spacing="4">
+
+                            <Label
+                                Text="{Binding Exercise.Name}"
+                                FontSize="19"
+                                FontAttributes="Bold" />
+
+                            <Label
+                                Text="{Binding Exercise.MuscleGroup}"
+                                FontSize="15" />
+
+                            <Label
+                                Text="{Binding Sets, StringFormat='Series: {0}'}"
+                                FontSize="14" />
+
+                            <Label
+                                Text="{Binding Reps, StringFormat='Repeticiones: {0}'}"
+                                FontSize="14" />
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+                </DataTemplate>
+
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>

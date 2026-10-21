@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GymApp.Views.HomePage"
+    Title="Inicio">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="24"
+            Spacing="20">
+
+            <VerticalStackLayout Spacing="4">
+
+                <Label
+                    Text="Hola, Daniel 👋"
+                    FontSize="30"
+                    FontAttributes="Bold" />
+
+                <Label
+                    Text="Listo para entrenar?"
+                    FontSize="18" />
+
+            </VerticalStackLayout>
+
+
+            <Border
+                Padding="20"
+                StrokeShape="RoundRectangle 16">
+
+                <VerticalStackLayout Spacing="10">
+
+                    <Label
+                        Text="Entrenamiento de hoy"
+                        FontSize="17"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        Text="Aún no has seleccionado un entrenamiento."
+                        FontSize="20"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        Text="Cuando tengas una rutina preparada, aquí podrás ver tu entrenamiento del día."
+                        FontSize="15" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+
+            <Label
+                Text="Resumen"
+                FontSize="23"
+                FontAttributes="Bold" />
+
+
+            <Grid
+                ColumnDefinitions="*,*"
+                ColumnSpacing="12">
+
+                <Border
+                    Padding="18"
+                    StrokeShape="RoundRectangle 14">
+
+                    <VerticalStackLayout Spacing="5">
+
+                        <Label
+                            Text="0"
+                            FontSize="28"
+                            FontAttributes="Bold" />
+
+                        <Label
+                            Text="Entrenamientos"
+                            FontSize="14" />
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+                <Border
+                    Grid.Column="1"
+                    Padding="18"
+                    StrokeShape="RoundRectangle 14">
+
+                    <VerticalStackLayout Spacing="5">
+
+                        <Label
+                            Text="0"
+                            FontSize="28"
+                            FontAttributes="Bold" />
+
+                        <Label
+                            Text="Minutos"
+                            FontSize="14" />
+
+                    </VerticalStackLayout>
+
+                </Border>
+
+            </Grid>
+
+
+            <Label
+                Text="Actividad reciente"
+                FontSize="23"
+                FontAttributes="Bold"
+                Margin="0,5,0,0" />
+
+
+            <Border
+                Padding="20"
+                StrokeShape="RoundRectangle 14">
+
+                <VerticalStackLayout
+                    Spacing="8"
+                    HorizontalOptions="Center">
+
+                    <Label
+                        Text="Todavía no hay actividad"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center" />
+
+                    <Label
+                        Text="Tus entrenamientos registrados aparecerán aquí."
+                        FontSize="14"
+                        HorizontalTextAlignment="Center" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>

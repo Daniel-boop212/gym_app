@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GymApp.Views.SelectExercisePage"
+    Title="Agregar ejercicio">
+
+    <Grid
+        Padding="20"
+        RowDefinitions="Auto,*"
+        RowSpacing="15">
+
+        <SearchBar
+            x:Name="SearchBar"
+            Placeholder="Buscar ejercicio..."
+            TextChanged="OnSearchTextChanged" />
+
+        <CollectionView
+            x:Name="ExercisesList"
+            Grid.Row="1">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Border
+                        Padding="15"
+                        Margin="0,5"
+                        StrokeShape="RoundRectangle 10">
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnExerciseTapped" />
+                        </Border.GestureRecognizers>
+
+                        <VerticalStackLayout Spacing="4">
+
+                            <Label
+                                Text="{Binding Name}"
+                                FontSize="19"
+                                FontAttributes="Bold" />
+
+                            <Label
+                                Text="{Binding MuscleGroup}"
+                                FontSize="15" />
+
+                            <Label
+                                Text="{Binding Equipment}"
+                                FontSize="14" />
+
+                        </VerticalStackLayout>
+
+                    </Border>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>

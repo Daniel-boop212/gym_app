@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GymApp.Views.RoutinesPage"
+    Title="Rutinas">
+
+    <Grid
+        Padding="24"
+        RowDefinitions="Auto,Auto,*"
+        RowSpacing="20">
+
+        <Label
+            Text="Rutinas"
+            FontSize="32"
+            FontAttributes="Bold" />
+
+        <Button
+            Grid.Row="1"
+            Text="+ Crear rutina"
+            Clicked="OnCreateRoutineClicked" />
+
+        <CollectionView
+            x:Name="RoutinesList"
+            Grid.Row="2">
+
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+
+                    <Border
+                        Padding="18"
+                        Margin="0,5"
+                        StrokeShape="RoundRectangle 12">
+
+                        <Border.GestureRecognizers>
+                            <TapGestureRecognizer
+                                Tapped="OnRoutineTapped" />
+                            </Border.GestureRecognizers>
+
+                            <VerticalStackLayout Spacing="5">
+
+                                <Label
+                                    Text="{Binding Name}"
+                                    FontSize="20"
+                                    FontAttributes="Bold" />
+
+                                <Label
+                                    Text="{Binding Exercises.Count, StringFormat='{0} ejercicios'}"
+                                    FontSize="15" />
+
+                            </VerticalStackLayout>
+
+                        </Border>
+
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+
+        </CollectionView>
+
+    </Grid>
+
+</ContentPage>

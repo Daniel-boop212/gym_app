@@ -5,33 +5,60 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GymApp.MainPage">
 
-    <Grid Padding="20" RowDefinitions="Auto,*">
+    <Grid Padding="20" RowDefinitions="Auto,Auto,Auto,*">
 
         <Label
             Text="Ejercicios"
             FontSize="30"
             FontAttributes="Bold" />
 
+        <SearchBar
+            x:Name="SearchBar"
+            Grid.Row="1"
+            Placeholder="Buscar ejercicio..."
+            Margin="0,10,0,10"
+            TextChanged="OnSearchTextChanged" />
+
+        <Picker
+            x:Name="MuscleGroupPicker"
+            Grid.Row="2"
+            Title="Filtrar por grupo muscular"
+            Margin="0,0,0,10"
+            SelectedIndexChanged="OnMuscleGroupChanged" />
+
         <CollectionView
             x:Name="ExercisesList"
-            Grid.Row="1"
-            Margin="0,20,0,0">
+            Grid.Row="3">
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
 
-                    <VerticalStackLayout Padding="10">
+                    <Border
+                        Padding="15"
+                        Margin="0,5"
+                        StrokeShape="RoundRectangle 10">
 
-                        <Label
-                            Text="{Binding Name}"
-                            FontSize="20"
-                            FontAttributes="Bold" />
+                        <Border.GestureRecognizers>
 
-                        <Label
-                            Text="{Binding MuscleGroup}"
-                            FontSize="15" />
+                            <TapGestureRecognizer
+                                Tapped="OnExerciseTapped" />
 
-                    </VerticalStackLayout>
+                        </Border.GestureRecognizers>
+
+                        <VerticalStackLayout>
+
+                            <Label
+                                Text="{Binding Name}"
+                                FontSize="20"
+                                FontAttributes="Bold" />
+
+                            <Label
+                                Text="{Binding MuscleGroup}"
+                                FontSize="15" />
+
+                        </VerticalStackLayout>
+
+                    </Border>
 
                 </DataTemplate>
             </CollectionView.ItemTemplate>

@@ -1,4 +1,6 @@
-﻿using GymApp.ViewModels;
+﻿using GymApp.Models;
+using GymApp.ViewModels;
+using GymApp.Views;
 
 namespace GymApp;
 
@@ -18,7 +20,40 @@ public partial class MainPage : ContentPage
     }
 
     private async void LoadExercises()
-    {
+{
         await _viewModel.LoadExercises();
+
+        MuscleGroupPicker.Items.Clear();
+        MuscleGroupPicker.Items.Add("Todos");
+
+        foreach (string muscleGroup in _viewModel.GetMuscleGroups())
+        {
+            MuscleGroupPicker.Items.Add(muscleGroup);
+        }
+
+        MuscleGroupPicker.SelectedIndex = 0;
+}
+
+    private async void OnExerciseTapped(object sender, TappedEventArgs e)
+    {
+        if (sender is Border border &&
+            border.BindingContext is Exercise exercise)
+        {
+            await Navigation.PushAsync(
+                new ExerciseDetailPage(exercise));
+        }
+    }
+
+    private void OnMuscleGroupChanged(object sender, EventArgs e)
+    {
+        if (MuscleGroupPicker.SelectedItem is string muscleGroup)
+        {
+            _viewModel.FilterByMuscleGroup(muscleGroup);
+        }
+    }
+
+    private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+    {
+        _viewModel.SearchExercises(e.NewTextValue);
     }
 }

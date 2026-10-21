@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<ContentPage
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="GymApp.Views.WorkoutPage"
+    Title="Entrenamiento">
+
+    <ScrollView>
+
+        <VerticalStackLayout
+            Padding="24"
+            Spacing="18">
+
+            <Label
+                x:Name="RoutineNameLabel"
+                Text="Entrenamiento"
+                FontSize="30"
+                FontAttributes="Bold" />
+
+            <Label
+                x:Name="TimerLabel"
+                Text="00:00"
+                FontSize="26"
+                HorizontalOptions="Center" />
+
+            <Label
+                x:Name="ExerciseProgressLabel"
+                Text="Ejercicio 1 de 1"
+                FontSize="16"
+                HorizontalOptions="Center" />
+
+            <Border
+                Padding="20"
+                StrokeShape="RoundRectangle 16">
+
+                <VerticalStackLayout Spacing="15">
+
+                    <Label
+                        x:Name="ExerciseNameLabel"
+                        Text="Ejercicio"
+                        FontSize="25"
+                        FontAttributes="Bold" />
+
+                    <Label
+                        Text="Series realizadas"
+                        FontSize="18"
+                        FontAttributes="Bold" />
+
+                    <CollectionView
+                        x:Name="SetsList"
+                        HeightRequest="150">
+
+                        <CollectionView.ItemTemplate>
+
+                            <DataTemplate>
+
+                                <Border
+                                    Padding="10"
+                                    Margin="0,3"
+                                    StrokeShape="RoundRectangle 8">
+
+                                    <HorizontalStackLayout
+                                        HorizontalOptions="Center"
+                                        Spacing="25">
+
+                                        <Label
+                                            Text="{Binding Reps, StringFormat='Reps: {0}'}" />
+
+                                        <Label
+                                            Text="{Binding Weight, StringFormat='Peso: {0} kg'}" />
+
+                                    </HorizontalStackLayout>
+
+                                </Border>
+
+                            </DataTemplate>
+
+                        </CollectionView.ItemTemplate>
+
+                    </CollectionView>
+
+                    <Label
+                        Text="Registrar serie"
+                        FontSize="18"
+                        FontAttributes="Bold" />
+
+                    <Grid
+                        ColumnDefinitions="*,*"
+                        ColumnSpacing="10">
+
+                        <Entry
+                            x:Name="WeightEntry"
+                            Placeholder="Peso (kg)"
+                            Keyboard="Numeric" />
+
+                        <Entry
+                            x:Name="RepsEntry"
+                            Grid.Column="1"
+                            Placeholder="Repeticiones"
+                            Keyboard="Numeric" />
+
+                    </Grid>
+
+                    <Button
+                        Text="Registrar serie"
+                        Clicked="OnAddSetClicked" />
+
+                    <Button
+                        Text="Marcar ejercicio como realizado"
+                        Clicked="OnCompleteExerciseClicked" />
+
+                    <Button
+                        Text="Omitir ejercicio"
+                        Clicked="OnSkipExerciseClicked" />
+
+                    <Button
+                        Text="Siguiente ejercicio"
+                        Clicked="OnNextExerciseClicked" />
+
+                </VerticalStackLayout>
+
+            </Border>
+
+            <Button
+                Text="Finalizar entrenamiento"
+                Clicked="OnFinishWorkoutClicked"
+                Margin="0,10,0,20" />
+
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+</ContentPage>
