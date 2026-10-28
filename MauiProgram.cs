@@ -20,8 +20,13 @@ public static class MauiProgram
             });
 
         builder.Services.AddSingleton<RoutineService>();
+        builder.Services.AddSingleton<WorkoutService>();
         builder.Services.AddTransient<RoutinesViewModel>();
+        builder.Services.AddTransient<HomeViewModel>();
+        builder.Services.AddTransient<ProgressViewModel>();
+        builder.Services.AddTransient<HomePage>();
 		builder.Services.AddTransient<RoutinesPage>();
+        builder.Services.AddTransient<ProgressPage>();
 
 #if DEBUG
         builder.Logging.AddDebug();

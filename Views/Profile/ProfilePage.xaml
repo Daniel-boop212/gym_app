@@ -3,207 +3,121 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:interface="clr-namespace:GymApp.Views.Interface"
     x:Class="GymApp.Views.ProfilePage"
+    Shell.NavBarIsVisible="False"
     Title="Perfil">
 
     <ScrollView>
+        <VerticalStackLayout Padding="22,24" Spacing="18">
+            <interface:AppHeader
+                Title="Tu perfil"
+                Subtitle="Información personal y preferencias de entrenamiento." />
 
-        <VerticalStackLayout
-            Padding="24"
-            Spacing="18">
+            <interface:AppSection>
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Información personal" FontSize="21" FontAttributes="Bold" />
+                    <interface:AppCard>
+                        <VerticalStackLayout Spacing="10">
+                            <Label Text="Nombre" FontSize="14" FontAttributes="Bold" />
+                            <Entry x:Name="NameEntry" Placeholder="Tu nombre" />
 
-            <Label
-                Text="Perfil"
-                FontSize="32"
-                FontAttributes="Bold" />
+                            <Grid ColumnDefinitions="*,*" ColumnSpacing="12">
+                                <VerticalStackLayout Spacing="4">
+                                    <Label Text="Edad" FontSize="14" FontAttributes="Bold" />
+                                    <Entry x:Name="AgeEntry" Placeholder="Ej. 20" Keyboard="Numeric" />
+                                </VerticalStackLayout>
+                                <VerticalStackLayout Grid.Column="1" Spacing="4">
+                                    <Label Text="Altura (cm)" FontSize="14" FontAttributes="Bold" />
+                                    <Entry x:Name="HeightEntry" Placeholder="Ej. 170" Keyboard="Numeric" />
+                                </VerticalStackLayout>
+                            </Grid>
 
-            <!-- Información personal -->
-
-            <Border
-                Padding="20"
-                StrokeShape="RoundRectangle 16">
-
-                <VerticalStackLayout Spacing="15">
-
-                    <Label
-                        Text="Información personal"
-                        FontSize="21"
-                        FontAttributes="Bold" />
-
-                    <Label
-                        Text="Nombre"
-                        FontSize="15" />
-
-                    <Entry
-                        x:Name="NameEntry"
-                        Placeholder="Tu nombre" />
-
-                    <Label
-                        Text="Edad"
-                        FontSize="15" />
-
-                    <Entry
-                        x:Name="AgeEntry"
-                        Placeholder="Ej. 20"
-                        Keyboard="Numeric" />
-
-                    <Label
-                        Text="Altura (cm)"
-                        FontSize="15" />
-
-                    <Entry
-                        x:Name="HeightEntry"
-                        Placeholder="Ej. 170"
-                        Keyboard="Numeric" />
-
-                    <Label
-                        Text="Peso (kg)"
-                        FontSize="15" />
-
-                    <Entry
-                        x:Name="WeightEntry"
-                        Placeholder="Ej. 80"
-                        Keyboard="Numeric" />
-
+                            <Label Text="Peso (kg)" FontSize="14" FontAttributes="Bold" />
+                            <Entry x:Name="WeightEntry" Placeholder="Ej. 80" Keyboard="Numeric" />
+                        </VerticalStackLayout>
+                    </interface:AppCard>
                 </VerticalStackLayout>
+            </interface:AppSection>
 
-            </Border>
-
-
-            <!-- Objetivo -->
-
-            <Border
-                Padding="20"
-                StrokeShape="RoundRectangle 16">
-
-                <VerticalStackLayout Spacing="15">
-
-                    <Label
-                        Text="Objetivo"
-                        FontSize="21"
-                        FontAttributes="Bold" />
-
-                    <Picker
-                        x:Name="GoalPicker"
-                        Title="Selecciona tu objetivo">
-
-                        <Picker.Items>
-
-                            <x:String>Ganar músculo</x:String>
-                            <x:String>Perder grasa</x:String>
-                            <x:String>Mantener peso</x:String>
-                            <x:String>Mejorar condición física</x:String>
-
-                        </Picker.Items>
-
-                    </Picker>
-
+            <interface:AppSection>
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Objetivo" FontSize="21" FontAttributes="Bold" />
+                    <interface:AppCard>
+                        <Picker x:Name="GoalPicker" Title="Selecciona tu objetivo">
+                            <Picker.Items>
+                                <x:String>Ganar músculo</x:String>
+                                <x:String>Perder grasa</x:String>
+                                <x:String>Mantener peso</x:String>
+                                <x:String>Mejorar condición física</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </interface:AppCard>
                 </VerticalStackLayout>
+            </interface:AppSection>
 
-            </Border>
+            <interface:AppSection>
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="Información de salud" FontSize="21" FontAttributes="Bold" />
+                    <interface:AppCard>
+                        <VerticalStackLayout Spacing="12">
+                            <Label
+                                Text="Esta información es opcional y ayuda a tener en cuenta posibles limitaciones durante el entrenamiento."
+                                FontSize="14"
+                                TextColor="{StaticResource FitnessMutedText}" />
 
+                            <Label Text="¿Tienes alguna condición médica que debamos tener en cuenta?" FontSize="14" FontAttributes="Bold" />
+                            <Picker x:Name="MedicalConditionPicker" Title="Selecciona una opción">
+                                <Picker.Items>
+                                    <x:String>No</x:String>
+                                    <x:String>Sí</x:String>
+                                    <x:String>Prefiero no indicarlo</x:String>
+                                </Picker.Items>
+                            </Picker>
 
-            <!-- Información de salud -->
+                            <Label Text="Condiciones o restricciones" FontSize="14" FontAttributes="Bold" />
+                            <Editor
+                                x:Name="MedicalConditionsEditor"
+                                Placeholder="Información adicional (opcional)"
+                                AutoSize="TextChanges"
+                                MinimumHeightRequest="84" />
 
-            <Border
-                Padding="20"
-                StrokeShape="RoundRectangle 16">
+                            <Label Text="¿Tienes alguna lesión actual?" FontSize="14" FontAttributes="Bold" />
+                            <Picker x:Name="InjuryPicker" Title="Selecciona una opción">
+                                <Picker.Items>
+                                    <x:String>No</x:String>
+                                    <x:String>Sí</x:String>
+                                    <x:String>Prefiero no indicarlo</x:String>
+                                </Picker.Items>
+                            </Picker>
 
-                <VerticalStackLayout Spacing="15">
+                            <Label Text="Lesiones o zonas que debemos tener en cuenta" FontSize="14" FontAttributes="Bold" />
+                            <Editor
+                                x:Name="InjuriesEditor"
+                                Placeholder="Información adicional (opcional)"
+                                AutoSize="TextChanges"
+                                MinimumHeightRequest="84" />
 
-                    <Label
-                        Text="Información de salud"
-                        FontSize="21"
-                        FontAttributes="Bold" />
+                            <Label Text="Ejercicios o movimientos que debes evitar" FontSize="14" FontAttributes="Bold" />
+                            <Editor
+                                x:Name="AvoidExercisesEditor"
+                                Placeholder="Ej. movimientos que causen dolor o que te hayan indicado evitar"
+                                AutoSize="TextChanges"
+                                MinimumHeightRequest="84" />
 
-                    <Label
-                        Text="Esta información es opcional y puede utilizarse para tener en cuenta posibles limitaciones durante el entrenamiento."
-                        FontSize="14" />
-
-                    <Label
-                        Text="¿Tienes alguna condición médica que debamos tener en cuenta?"
-                        FontSize="15"
-                        FontAttributes="Bold" />
-
-                    <Picker
-                        x:Name="MedicalConditionPicker"
-                        Title="Selecciona una opción">
-
-                        <Picker.Items>
-
-                            <x:String>No</x:String>
-                            <x:String>Sí</x:String>
-                            <x:String>Prefiero no indicarlo</x:String>
-
-                        </Picker.Items>
-
-                    </Picker>
-
-                    <Label
-                        Text="Condiciones o restricciones"
-                        FontSize="15" />
-
-                    <Editor
-                        x:Name="MedicalConditionsEditor"
-                        Placeholder="Información adicional (opcional)"
-                        AutoSize="TextChanges"
-                        MinimumHeightRequest="100" />
-
-                    <Label
-                        Text="¿Tienes alguna lesión actual?"
-                        FontSize="15"
-                        FontAttributes="Bold" />
-
-                    <Picker
-                        x:Name="InjuryPicker"
-                        Title="Selecciona una opción">
-
-                        <Picker.Items>
-
-                            <x:String>No</x:String>
-                            <x:String>Sí</x:String>
-                            <x:String>Prefiero no indicarlo</x:String>
-
-                        </Picker.Items>
-
-                    </Picker>
-
-                    <Label
-                        Text="Lesiones o zonas que debemos tener en cuenta"
-                        FontSize="15" />
-
-                    <Editor
-                        x:Name="InjuriesEditor"
-                        Placeholder="Información adicional (opcional)"
-                        AutoSize="TextChanges"
-                        MinimumHeightRequest="100" />
-
-                    <Label
-                        Text="Ejercicios o movimientos que debes evitar"
-                        FontSize="15" />
-
-                    <Editor
-                        x:Name="AvoidExercisesEditor"
-                        Placeholder="Ej. movimientos que causen dolor o que te hayan indicado evitar"
-                        AutoSize="TextChanges"
-                        MinimumHeightRequest="100" />
-
-                    <Label
-                        Text="La información de salud no sustituye la valoración ni las recomendaciones de un médico u otro profesional de la salud."
-                        FontSize="13" />
-
+                            <Label
+                                Text="La información de salud no sustituye la valoración de un profesional de la salud."
+                                FontSize="12"
+                                TextColor="{StaticResource FitnessMutedText}" />
+                        </VerticalStackLayout>
+                    </interface:AppCard>
                 </VerticalStackLayout>
+            </interface:AppSection>
 
-            </Border>
-
-
-            <Button
+            <interface:AppButton
                 Text="Guardar cambios"
                 Clicked="OnSaveClicked"
-                Margin="0,5,0,20" />
-
+                Margin="0,4,0,20" />
         </VerticalStackLayout>
-
     </ScrollView>
-
 </ContentPage>

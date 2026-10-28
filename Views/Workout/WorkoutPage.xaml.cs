@@ -61,7 +61,7 @@ public partial class WorkoutPage : ContentPage
     }
 
     private async void OnAddSetClicked(
-        object sender,
+        object? sender,
         EventArgs e)
     {
         if (!int.TryParse(
@@ -99,21 +99,21 @@ public partial class WorkoutPage : ContentPage
     }
 
     private void OnCompleteExerciseClicked(
-        object sender,
+        object? sender,
         EventArgs e)
     {
         _viewModel.CompleteExercise();
     }
 
     private void OnSkipExerciseClicked(
-        object sender,
+        object? sender,
         EventArgs e)
     {
         _viewModel.SkipExercise();
     }
 
     private void OnNextExerciseClicked(
-        object sender,
+        object? sender,
         EventArgs e)
     {
         _viewModel.NextExercise();
@@ -122,7 +122,7 @@ public partial class WorkoutPage : ContentPage
     }
 
     private async void OnFinishWorkoutClicked(
-        object sender,
+        object? sender,
         EventArgs e)
     {
         bool confirm = await DisplayAlertAsync(

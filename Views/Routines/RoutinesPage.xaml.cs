@@ -7,17 +7,19 @@ namespace GymApp.Views;
 public partial class RoutinesPage : ContentPage
 {
     private readonly RoutinesViewModel _viewModel;
+    private readonly WorkoutService _workoutService;
 
-    public RoutinesPage(RoutinesViewModel viewModel)
+    public RoutinesPage(RoutinesViewModel viewModel, WorkoutService workoutService)
     {
         InitializeComponent();
 
         _viewModel = viewModel;
+        _workoutService = workoutService;
 
         RoutinesList.ItemsSource = _viewModel.Routines;
     }
 
-    private async void OnCreateRoutineClicked(object sender, EventArgs e)
+    private async void OnCreateRoutineClicked(object? sender, EventArgs e)
     {
         string? name = await DisplayPromptAsync(
             "Nueva rutina",
@@ -29,13 +31,13 @@ public partial class RoutinesPage : ContentPage
         }
     }
 
-    private async void OnRoutineTapped(object sender, TappedEventArgs e)
+    private async void OnRoutineTapped(object? sender, TappedEventArgs e)
     {
         if (sender is Border border &&
             border.BindingContext is Routine routine)
         {
             await Navigation.PushAsync(
-                new RoutineDetailPage(routine));
+                new RoutineDetailPage(routine, _workoutService));
         }
     }
 }

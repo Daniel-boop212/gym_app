@@ -7,7 +7,7 @@ public partial class ProfilePage : ContentPage
         InitializeComponent();
     }
 
-    private async void OnSaveClicked(object sender, EventArgs e)
+    private async void OnSaveClicked(object? sender, EventArgs e)
     {
         await DisplayAlertAsync(
             "Perfil",

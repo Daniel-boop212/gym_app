@@ -4,68 +4,126 @@
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="GymApp.Views.ExercisesPage"
+    Shell.NavBarIsVisible="False"
+    BackgroundColor="{StaticResource FitnessBackground}"
     Title="Ejercicios">
 
-    <Grid Padding="20" RowDefinitions="Auto,Auto,Auto,*">
+    <Grid Padding="22,24,22,12" RowDefinitions="Auto,Auto,Auto,*" RowSpacing="12">
 
-        <Label
-            Text="Ejercicios"
-            FontSize="30"
-            FontAttributes="Bold" />
+        <VerticalStackLayout Spacing="4" Margin="0,0,0,4">
+            <Label
+                Text="Ejercicios"
+                FontSize="30"
+                FontAttributes="Bold"
+                TextColor="{StaticResource FitnessText}" />
+            <Label
+                Text="Busca y conoce cada movimiento."
+                FontSize="15"
+                TextColor="{StaticResource FitnessMutedText}" />
+        </VerticalStackLayout>
 
-        <SearchBar
-            x:Name="SearchBar"
+        <Border
             Grid.Row="1"
-            Placeholder="Buscar ejercicio..."
-            Margin="0,10,0,10"
-            TextChanged="OnSearchTextChanged" />
+            Padding="6,0"
+            BackgroundColor="White"
+            Stroke="{StaticResource FitnessBorder}"
+            StrokeShape="RoundRectangle 14">
+            <SearchBar
+                x:Name="SearchBar"
+                Placeholder="Buscar ejercicio..."
+                BackgroundColor="Transparent"
+                TextChanged="OnSearchTextChanged" />
+        </Border>
 
-        <Picker
-            x:Name="MuscleGroupPicker"
+        <Border
             Grid.Row="2"
-            Title="Filtrar por grupo muscular"
-            Margin="0,0,0,10"
-            SelectedIndexChanged="OnMuscleGroupChanged" />
+            Padding="12,2"
+            BackgroundColor="White"
+            Stroke="{StaticResource FitnessBorder}"
+            StrokeShape="RoundRectangle 14">
+            <Picker
+                x:Name="MuscleGroupPicker"
+                Title="Filtrar por grupo muscular"
+                TextColor="{StaticResource FitnessText}"
+                SelectedIndexChanged="OnMuscleGroupChanged" />
+        </Border>
 
         <CollectionView
             x:Name="ExercisesList"
-            Grid.Row="3">
+            Grid.Row="3"
+            Margin="0,2,0,0"
+            SelectionMode="None">
+
+            <CollectionView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" ItemSpacing="10" />
+            </CollectionView.ItemsLayout>
+
+            <CollectionView.EmptyView>
+                <VerticalStackLayout Padding="20" Spacing="6" VerticalOptions="Center">
+                    <Label
+                        Text="No encontramos ejercicios"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center" />
+                    <Label
+                        Text="Prueba con otro nombre o grupo muscular."
+                        TextColor="{StaticResource FitnessMutedText}"
+                        HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </CollectionView.EmptyView>
 
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-
                     <Border
-                        Padding="15"
-                        Margin="0,5"
-                        StrokeShape="RoundRectangle 10">
-
+                        Style="{StaticResource AppCardBorderStyle}"
+                        Padding="16"
+                        Margin="0,0,0,1">
                         <Border.GestureRecognizers>
-
-                            <TapGestureRecognizer
-                                Tapped="OnExerciseTapped" />
-
+                            <TapGestureRecognizer Tapped="OnExerciseTapped" />
                         </Border.GestureRecognizers>
 
-                        <VerticalStackLayout>
+                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="12">
+                            <VerticalStackLayout Spacing="8">
+                                <Label
+                                    Text="{Binding Name}"
+                                    FontSize="18"
+                                    FontAttributes="Bold"
+                                    TextColor="{StaticResource FitnessText}" />
+                                <HorizontalStackLayout Spacing="8">
+                                    <Border
+                                        Padding="9,4"
+                                        BackgroundColor="{StaticResource FitnessTint}"
+                                        StrokeThickness="0"
+                                        StrokeShape="RoundRectangle 8"
+                                        HorizontalOptions="Start">
+                                        <Label
+                                            Text="{Binding MuscleGroup}"
+                                            FontSize="12"
+                                            FontAttributes="Bold"
+                                            TextColor="{StaticResource FitnessPrimary}" />
+                                    </Border>
+                                    <Label
+                                        Text="{Binding Difficulty, StringFormat='Dificultad · {0}'}"
+                                        FontSize="12"
+                                        TextColor="{StaticResource FitnessMutedText}"
+                                        VerticalTextAlignment="Center" />
+                                </HorizontalStackLayout>
+                                <Label
+                                    Text="{Binding Equipment, StringFormat='Equipo: {0}'}"
+                                    FontSize="13"
+                                    TextColor="{StaticResource FitnessMutedText}" />
+                            </VerticalStackLayout>
 
                             <Label
-                                Text="{Binding Name}"
-                                FontSize="20"
-                                FontAttributes="Bold" />
-
-                            <Label
-                                Text="{Binding MuscleGroup}"
-                                FontSize="15" />
-
-                        </VerticalStackLayout>
-
+                                Grid.Column="1"
+                                Text="›"
+                                FontSize="28"
+                                TextColor="{StaticResource FitnessPrimary}"
+                                VerticalOptions="Center" />
+                        </Grid>
                     </Border>
-
                 </DataTemplate>
             </CollectionView.ItemTemplate>
-
         </CollectionView>
-
     </Grid>
-
 </ContentPage>

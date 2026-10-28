@@ -28,7 +28,7 @@ public partial class SelectExercisePage : ContentPage
         ExercisesList.ItemsSource = _allExercises;
     }
 
-    private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+    private void OnSearchTextChanged(object? sender, TextChangedEventArgs e)
     {
         string search = e.NewTextValue?.ToLower() ?? "";
 
@@ -39,7 +39,7 @@ public partial class SelectExercisePage : ContentPage
             .ToList();
     }
 
-    private async void OnExerciseTapped(object sender, TappedEventArgs e)
+    private async void OnExerciseTapped(object? sender, TappedEventArgs e)
     {
         if (sender is Border border &&
             border.BindingContext is Exercise exercise)

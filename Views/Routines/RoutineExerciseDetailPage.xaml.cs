@@ -25,14 +25,14 @@ public partial class RoutineExerciseDetailPage : ContentPage
         RestEntry.Text = routineExercise.RestSeconds.ToString();
     }
 
-    private async void OnSaveClicked(object sender, EventArgs e)
+    private async void OnSaveClicked(object? sender, EventArgs e)
     {
         if (!int.TryParse(SetsEntry.Text, out int sets) ||
             !int.TryParse(RepsEntry.Text, out int reps) ||
             !double.TryParse(WeightEntry.Text, out double weight) ||
             !int.TryParse(RestEntry.Text, out int rest))
         {
-            await DisplayAlert(
+            await DisplayAlertAsync(
                 "Datos inválidos",
                 "Revisa los valores ingresados.",
                 "Aceptar");
@@ -48,9 +48,9 @@ public partial class RoutineExerciseDetailPage : ContentPage
         await Navigation.PopAsync();
     }
 
-    private async void OnDeleteClicked(object sender, EventArgs e)
+    private async void OnDeleteClicked(object? sender, EventArgs e)
     {
-        bool confirm = await DisplayAlert(
+        bool confirm = await DisplayAlertAsync(
             "Eliminar ejercicio",
             $"¿Quieres eliminar {_routineExercise.Exercise.Name} de esta rutina?",
             "Eliminar",

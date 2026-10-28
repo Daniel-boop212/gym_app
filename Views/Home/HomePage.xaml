@@ -3,7 +3,9 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:interface="clr-namespace:GymApp.Views.Interface"
     x:Class="GymApp.Views.HomePage"
+    Shell.NavBarIsVisible="False"
     Title="Inicio">
 
     <ScrollView>
@@ -12,23 +14,12 @@
             Padding="24"
             Spacing="20">
 
-            <VerticalStackLayout Spacing="4">
-
-                <Label
-                    Text="Hola, Daniel 👋"
-                    FontSize="30"
-                    FontAttributes="Bold" />
-
-                <Label
-                    Text="Listo para entrenar?"
-                    FontSize="18" />
-
-            </VerticalStackLayout>
+            <interface:AppHeader
+                Title="Hola, Daniel 👋"
+                Subtitle="¿Listo para entrenar?" />
 
 
-            <Border
-                Padding="20"
-                StrokeShape="RoundRectangle 16">
+            <interface:AppCard>
 
                 <VerticalStackLayout Spacing="10">
 
@@ -38,17 +29,21 @@
                         FontAttributes="Bold" />
 
                     <Label
-                        Text="Aún no has seleccionado un entrenamiento."
+                        Text="Elige una rutina para comenzar tu próxima sesión."
                         FontSize="20"
                         FontAttributes="Bold" />
 
                     <Label
-                        Text="Cuando tengas una rutina preparada, aquí podrás ver tu entrenamiento del día."
+                        Text="Cuando finalices un entrenamiento, tus datos aparecerán en Inicio y Progreso."
                         FontSize="15" />
+
+                    <interface:AppButton
+                        Text="Ver rutinas"
+                        Clicked="OnRoutinesClicked" />
 
                 </VerticalStackLayout>
 
-            </Border>
+            </interface:AppCard>
 
 
             <Label
@@ -61,14 +56,12 @@
                 ColumnDefinitions="*,*"
                 ColumnSpacing="12">
 
-                <Border
-                    Padding="18"
-                    StrokeShape="RoundRectangle 14">
+                <interface:AppCard>
 
                     <VerticalStackLayout Spacing="5">
 
                         <Label
-                            Text="0"
+                        Text="{Binding CompletedWorkoutsText}"
                             FontSize="28"
                             FontAttributes="Bold" />
 
@@ -78,17 +71,15 @@
 
                     </VerticalStackLayout>
 
-                </Border>
+                </interface:AppCard>
 
-                <Border
-                    Grid.Column="1"
-                    Padding="18"
-                    StrokeShape="RoundRectangle 14">
+                <interface:AppCard
+                    Grid.Column="1">
 
                     <VerticalStackLayout Spacing="5">
 
                         <Label
-                            Text="0"
+                        Text="{Binding TrainingTimeText}"
                             FontSize="28"
                             FontAttributes="Bold" />
 
@@ -98,7 +89,7 @@
 
                     </VerticalStackLayout>
 
-                </Border>
+                </interface:AppCard>
 
             </Grid>
 
@@ -110,28 +101,26 @@
                 Margin="0,5,0,0" />
 
 
-            <Border
-                Padding="20"
-                StrokeShape="RoundRectangle 14">
+            <interface:AppCard>
 
                 <VerticalStackLayout
                     Spacing="8"
                     HorizontalOptions="Center">
 
                     <Label
-                        Text="Todavía no hay actividad"
+                        Text="{Binding LatestActivityTitle}"
                         FontSize="18"
                         FontAttributes="Bold"
                         HorizontalTextAlignment="Center" />
 
                     <Label
-                        Text="Tus entrenamientos registrados aparecerán aquí."
+                        Text="{Binding LatestActivityDescription}"
                         FontSize="14"
                         HorizontalTextAlignment="Center" />
 
                 </VerticalStackLayout>
 
-            </Border>
+            </interface:AppCard>
 
         </VerticalStackLayout>
 

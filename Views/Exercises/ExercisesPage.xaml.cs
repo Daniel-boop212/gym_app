@@ -34,12 +34,12 @@ public partial class ExercisesPage : ContentPage
         MuscleGroupPicker.SelectedIndex = 0;
     }
 
-    private void OnSearchTextChanged(object sender, TextChangedEventArgs e)
+    private void OnSearchTextChanged(object? sender, TextChangedEventArgs e)
     {
         _viewModel.SearchExercises(e.NewTextValue);
     }
 
-    private void OnMuscleGroupChanged(object sender, EventArgs e)
+    private void OnMuscleGroupChanged(object? sender, EventArgs e)
     {
         if (MuscleGroupPicker.SelectedItem is string muscleGroup)
         {
@@ -47,7 +47,7 @@ public partial class ExercisesPage : ContentPage
         }
     }
 
-    private async void OnExerciseTapped(object sender, TappedEventArgs e)
+    private async void OnExerciseTapped(object? sender, TappedEventArgs e)
     {
         if (sender is Border border &&
             border.BindingContext is Exercise exercise)

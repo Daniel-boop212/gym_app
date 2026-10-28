@@ -3,32 +3,102 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:interface="clr-namespace:GymApp.Views.Interface"
     x:Class="GymApp.Views.ProgressPage"
+    Shell.NavBarIsVisible="False"
     Title="Progreso">
 
-    <VerticalStackLayout
-        Padding="24"
-        Spacing="20">
+    <CollectionView
+        ItemsSource="{Binding Sessions}"
+        SelectionMode="None"
+        Margin="0">
 
-        <Label
-            Text="Progreso"
-            FontSize="32"
-            FontAttributes="Bold" />
+        <CollectionView.Header>
+            <VerticalStackLayout Padding="22,24,22,12" Spacing="18">
+                <interface:AppHeader
+                    Title="Progreso"
+                    Subtitle="Un resumen de tus entrenamientos finalizados." />
 
-        <Label
-            Text="Aquí podrás consultar tu evolución."
-            FontSize="18" />
+                <Grid ColumnDefinitions="*,*" RowDefinitions="Auto,Auto" ColumnSpacing="12" RowSpacing="12">
+                    <interface:AppCard>
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="ENTRENAMIENTOS" FontSize="11" FontAttributes="Bold" TextColor="{StaticResource FitnessMutedText}" />
+                            <Label Text="{Binding CompletedWorkoutsText}" FontSize="27" FontAttributes="Bold" TextColor="{StaticResource FitnessPrimary}" />
+                        </VerticalStackLayout>
+                    </interface:AppCard>
 
-        <Border
-            Padding="20"
-            StrokeShape="RoundRectangle 12">
+                    <interface:AppCard Grid.Column="1">
+                        <VerticalStackLayout Spacing="5">
+                            <Label Text="TIEMPO ENTRENADO" FontSize="11" FontAttributes="Bold" TextColor="{StaticResource FitnessMutedText}" />
+                            <Label Text="{Binding TrainingTimeText}" FontSize="22" FontAttributes="Bold" TextColor="{StaticResource FitnessPrimary}" />
+                        </VerticalStackLayout>
+                    </interface:AppCard>
 
-            <Label
-                Text="Estadísticas y gráficas&#10;&#10;Próximamente"
-                FontSize="18" />
+                    <interface:AppCard Grid.Row="1" Grid.ColumnSpan="2">
+                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                            <VerticalStackLayout Spacing="5">
+                                <Label Text="SERIES REGISTRADAS" FontSize="11" FontAttributes="Bold" TextColor="{StaticResource FitnessMutedText}" />
+                                <Label Text="{Binding CompletedSetsText}" FontSize="24" FontAttributes="Bold" TextColor="{StaticResource FitnessPrimary}" />
+                            </VerticalStackLayout>
+                            <Label Grid.Column="1" Text="Series" FontSize="14" TextColor="{StaticResource FitnessMutedText}" VerticalOptions="Center" />
+                        </Grid>
+                    </interface:AppCard>
+                </Grid>
 
-        </Border>
+                <Label Text="Sesiones recientes" FontSize="22" FontAttributes="Bold" />
+            </VerticalStackLayout>
+        </CollectionView.Header>
 
-    </VerticalStackLayout>
+        <CollectionView.EmptyView>
+            <interface:AppCard Margin="22,0,22,12">
+                <VerticalStackLayout Spacing="8" HorizontalOptions="Center">
+                    <Label
+                        Text="Aún no hay entrenamientos"
+                        FontSize="18"
+                        FontAttributes="Bold"
+                        HorizontalTextAlignment="Center" />
+                    <Label
+                        Text="Cuando finalices tu primera sesión, aquí verás su duración, ejercicios y series."
+                        FontSize="14"
+                        TextColor="{StaticResource FitnessMutedText}"
+                        HorizontalTextAlignment="Center" />
+                </VerticalStackLayout>
+            </interface:AppCard>
+        </CollectionView.EmptyView>
 
+        <CollectionView.ItemTemplate>
+            <DataTemplate>
+                <interface:AppCard Margin="22,0,22,12" Padding="16">
+                    <VerticalStackLayout Spacing="10">
+                        <Grid ColumnDefinitions="*,Auto" ColumnSpacing="10">
+                            <Label
+                                Text="{Binding RoutineName}"
+                                FontSize="18"
+                                FontAttributes="Bold"
+                                TextColor="{StaticResource FitnessText}" />
+                            <Label
+                                Grid.Column="1"
+                                Text="{Binding DateText}"
+                                FontSize="13"
+                                TextColor="{StaticResource FitnessMutedText}"
+                                VerticalTextAlignment="Center" />
+                        </Grid>
+
+                        <Grid ColumnDefinitions="*,*" ColumnSpacing="10">
+                            <Label
+                                Text="{Binding DurationText}"
+                                FontSize="14"
+                                TextColor="{StaticResource FitnessPrimary}" />
+                            <Label
+                                Grid.Column="1"
+                                Text="{Binding DetailsText}"
+                                FontSize="13"
+                                TextColor="{StaticResource FitnessMutedText}"
+                                HorizontalTextAlignment="End" />
+                        </Grid>
+                    </VerticalStackLayout>
+                </interface:AppCard>
+            </DataTemplate>
+        </CollectionView.ItemTemplate>
+    </CollectionView>
 </ContentPage>

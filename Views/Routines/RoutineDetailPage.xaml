@@ -3,12 +3,13 @@
 <ContentPage
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:interface="clr-namespace:GymApp.Views.Interface"
     x:Class="GymApp.Views.RoutineDetailPage"
     Title="Rutina">
 
     <Grid
         Padding="24"
-        RowDefinitions="Auto,Auto,*"
+        RowDefinitions="Auto,Auto,Auto,*"
         RowSpacing="20">
 
         <Label
@@ -16,15 +17,20 @@
             FontSize="32"
             FontAttributes="Bold" />
 
-        <Label
+        <interface:AppButton
             Grid.Row="1"
+            Text="Comenzar entrenamiento"
+            Clicked="OnStartWorkoutClicked" />
+
+        <Label
+            Grid.Row="2"
             Text="Ejercicios"
             FontSize="24"
             FontAttributes="Bold" />
 
         <CollectionView
             x:Name="ExercisesList"
-            Grid.Row="2"
+            Grid.Row="3"
             ItemsSource="{Binding Exercises}"
             SelectionMode="Single"
             SelectionChanged="OnRoutineExerciseSelected">
